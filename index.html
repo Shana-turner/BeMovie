@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <!--HEADER-->
@@ -27,10 +27,11 @@
     <div class="container">
 
         <!--SEARCH-->
-        <form action="" class="form-search" id="SEARCH">
+        <div id="SEARCH">
             <input type="text" id="recherche" name="recherche" class="search">
-            <button type="submit" class="btn-search"><img src="fleche.svg" alt="Flèche"></button>
-        </form>
+            <button class="btn-search"><img src="fleche.svg" alt="Flèche"></button>
+        </div>
+        
 
         <!--RESULTATS FOR ""-->
         <div class="resultat">
@@ -174,6 +175,15 @@
         </ul>
         <p>@2023 - All rights reserved</p>
     </footer>
-    
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 </html>
