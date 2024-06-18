@@ -6,6 +6,8 @@
     <title>BeMovies</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!--HEADER-->
@@ -13,9 +15,9 @@
         <span class="close-menu">X</span>
         <h1 class="logo"><span>Be</span>movies</h1>
         <ul class="menu">
-            <li><a href="">Search</a></li>
-            <li><a href="">Latest</a></li>
-            <li><a href="">Genres</a></li>
+            <li><a href="#SEARCH">Search</a></li>
+            <li><a href="#LATEST">Latest</a></li>
+            <li><a href="#GENRE">Genres</a></li>
             <li><a href="" class="open-register">Register</a></li>
             <li><a href="" class="open-login">Signin</a></li>
         </ul>
@@ -25,7 +27,7 @@
     <div class="container">
 
         <!--SEARCH-->
-        <form action="" class="form-search">
+        <form action="" class="form-search" id="SEARCH">
             <input type="text" id="recherche" name="recherche" class="search">
             <button type="submit" class="btn-search"><img src="fleche.svg" alt="Flèche"></button>
         </form>
@@ -35,33 +37,41 @@
             <p>Results for "<span class="recherche-film"></span>"</p>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <!-- <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 1</div>
                     <div class="swiper-slide">Slide 2</div>
                     <div class="swiper-slide">Slide 3</div> 
-                    <div class="swiper-slide">Slide 3</div>  -->
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 3</div> 
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div ><img class="swiper-button-next" src="flecheDroite.svg" alt=""></div>
+                <div ><img class="swiper-button-prev" src="flecheGauche.svg" alt=""></div>
             </div>
         </div>
 
         <!--LATEST RELEASES-->
-        <div class="latest">
+        <div class="latest" id="LATEST">
             <p>Latest Releases</p>
-            <div class="swiper1 mySwiper1">
+            <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <!-- <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 1</div>
                     <div class="swiper-slide">Slide 2</div>
                     <div class="swiper-slide">Slide 3</div> 
-                    <div class="swiper-slide">Slide 3</div>  -->
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 3</div> 
                 </div>
-                <div class="swiper-button-next1"></div>
-                <div class="swiper-button-prev1"></div>
+                <div ><img class="swiper-button-next" src="flecheDroite.svg" alt=""></div>
+                <div ><img class="swiper-button-prev" src="flecheGauche.svg" alt=""></div>
             </div>
         </div>
 
         <!--MOVIES BY GENRE-->
-        <div class="by-genre">
+        <div class="by-genre" id="GENRE">
             <p>Movies by genre</p>
             <ul class="list-genre">
                 <li><a href="">Comedy</a></li>
@@ -72,15 +82,19 @@
                 <li><a href="">Animation</a></li>
             </ul>
             <p class="genre-name"></p>
-            <div class="swiper2 mySwiper2">
-                <!-- <div class="swiper-wrapper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
                     <div class="swiper-slide">Slide 1</div>
                     <div class="swiper-slide">Slide 2</div>
                     <div class="swiper-slide">Slide 3</div> 
                     <div class="swiper-slide">Slide 3</div> 
-                </div> -->
-                <div class="swiper-button-next2"></div>
-                <div class="swiper-button-prev2"></div>
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 3</div> 
+                </div>
+                <div ><img class="swiper-button-next" src="flecheDroite.svg" alt=""></div>
+                <div ><img class="swiper-button-prev" src="flecheGauche.svg" alt=""></div>
             </div>
         </div>
     </div>
@@ -97,7 +111,7 @@
                 <input type="text" id="userName" name="userName" placeholder="Username" class="inputlogin">
                 <input type="password" name="password" id="password" placeholder="Password" class="inputlogin">
                 <div class="checkbox-remember">
-                    <input type="checkbox" name="remember" id="remember">
+                    <input type="checkbox-login" name="remember" id="remember">
                     <label for="remember" class="remember">Remember me</label>
                 </div>
                 <button type="submit" class="btn-login">Login</button>
@@ -152,13 +166,14 @@
     <footer>
         <h1 class="logo"><span>Be</span>movies</h1>
         <ul class="menu">
-            <li><a href="">Search</a></li>
-            <li><a href="">Latest</a></li>
-            <li><a href="">Genres</a></li>
+            <li><a href="#SEARCH">Search</a></li>
+            <li><a href="#LATEST">Latest</a></li>
+            <li><a href="#GENRE">Genres</a></li>
             <li><a href="" class="open-register">Register</a></li>
             <li><a href="" class="open-login">Signin</a></li>
         </ul>
         <p>@2023 - All rights reserved</p>
     </footer>
+    
 </body>
 </html>

@@ -196,16 +196,16 @@ header .open-menu {
     font-size: 16px;
   }
 }
-.latest .swiper1 {
+.latest .swiper {
   width: 100%;
   height: 380px;
 }
-.latest .swiper1 .swiper-slide {
+.latest .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.latest .swiper1 .swiper-slide img {
+.latest .swiper .swiper-slide img {
   max-width: 234px;
   width: 100%;
   max-height: 351px;
@@ -280,16 +280,16 @@ header .open-menu {
     font-size: 16px;
   }
 }
-.by-genre .swiper2 {
+.by-genre .swiper {
   width: 100%;
   height: 380px;
 }
-.by-genre .swiper2 .swiper-slide {
+.by-genre .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.by-genre .swiper2 .swiper-slide img {
+.by-genre .swiper .swiper-slide img {
   max-width: 234px;
   width: 100%;
   max-height: 351px;
@@ -699,6 +699,8 @@ form .btn-login {
 @media screen and (min-width: 1440px) {
   .popup-movie {
     left: 35vw;
+    flex-direction: row;
+    gap: 40px;
   }
 }
 .popup-movie .close-popup-movie {
