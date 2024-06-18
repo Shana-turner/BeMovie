@@ -1,0 +1,766 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  padding-top: 10px;
+  background-color: rgb(20, 21, 23);
+  height: 60px;
+  font-family: "Inria Sans", sans-serif;
+}
+@media screen and (min-width: 1440px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    height: 100px;
+  }
+}
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+header h1 span {
+  color: rgb(204, 0, 0);
+}
+header .menu {
+  display: none;
+  background-color: rgb(20, 21, 23);
+  max-width: 100vw;
+  width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  gap: 30px;
+  z-index: 4;
+}
+@media screen and (min-width: 1440px) {
+  header .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 29px;
+    height: 60px;
+    position: initial;
+    width: initial;
+    align-items: center;
+    z-index: 0;
+  }
+}
+header .menu li a {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+header .menu li a:hover {
+  color: red;
+}
+@media screen and (min-width: 1440px) {
+  header .menu li a {
+    font-size: 14px;
+  }
+}
+header .close-menu {
+  display: none;
+}
+header .open-menu {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+}
+@media screen and (min-width: 1440px) {
+  header .open-menu {
+    display: none;
+  }
+}
+
+.container {
+  padding: 50px 50px;
+  background-color: rgb(25, 27, 32);
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 73px 180px;
+  }
+}
+
+.form-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form-search .search {
+  border-radius: 8px 0px 0px 8px;
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 14px;
+  padding: 6px 9px;
+  border: none;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1440px) {
+  .form-search .search {
+    font-size: 16px;
+    line-height: 19.36px;
+    padding: 11px 18px;
+    max-width: 272px;
+    width: 100%;
+  }
+}
+.form-search .btn-search {
+  background-color: rgb(204, 0, 0);
+  border: none;
+  border-radius: 0px 8px 8px 0px;
+  padding: 5.5px 12px;
+  cursor: pointer;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.25);
+  margin-left: -30px;
+}
+@media screen and (min-width: 1440px) {
+  .form-search .btn-search {
+    padding: 12px 22px;
+  }
+}
+
+.resultat {
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+}
+@media screen and (min-width: 1440px) {
+  .resultat {
+    margin-top: 60px;
+    max-width: 1080px;
+    width: 100%;
+  }
+}
+.resultat p {
+  text-align: left;
+  color: white;
+  font-size: 14px;
+  padding-left: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .resultat p {
+    font-size: 16px;
+  }
+}
+.resultat .swiper {
+  width: 100%;
+  height: 380px;
+}
+.resultat .swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resultat .swiper .swiper-slide img {
+  max-width: 234px;
+  width: 100%;
+  max-height: 351px;
+  height: 100%;
+}
+
+.latest {
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+}
+@media screen and (min-width: 1440px) {
+  .latest {
+    margin-top: 60px;
+    max-width: 1080px;
+    width: 100%;
+  }
+}
+.latest p {
+  text-align: left;
+  color: white;
+  font-size: 14px;
+  padding-left: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .latest p {
+    font-size: 16px;
+  }
+}
+.latest .swiper1 {
+  width: 100%;
+  height: 380px;
+}
+.latest .swiper1 .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.latest .swiper1 .swiper-slide img {
+  max-width: 234px;
+  width: 100%;
+  max-height: 351px;
+  height: 100%;
+}
+
+.by-genre {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+.by-genre p {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1440px) {
+  .by-genre p {
+    margin-bottom: 46px;
+  }
+}
+.by-genre .list-genre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  border-bottom: 1px white solid;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .by-genre .list-genre {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .by-genre .list-genre {
+    gap: 45px;
+    padding-bottom: 26px;
+  }
+}
+.by-genre .list-genre li a {
+  font-size: 14px;
+  color: white;
+}
+@media screen and (min-width: 1440px) {
+  .by-genre .list-genre li a {
+    font-size: 16px;
+  }
+}
+.by-genre .list-genre li a:hover {
+  background-color: rgb(204, 0, 0);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+@media screen and (min-width: 1440px) {
+  .by-genre .list-genre li a:hover {
+    border-radius: 8px;
+    padding: 7px 9px;
+  }
+}
+.by-genre p {
+  text-align: left;
+  color: white;
+  font-size: 14px;
+  padding-left: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .by-genre p {
+    font-size: 16px;
+  }
+}
+.by-genre .swiper2 {
+  width: 100%;
+  height: 380px;
+}
+.by-genre .swiper2 .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.by-genre .swiper2 .swiper-slide img {
+  max-width: 234px;
+  width: 100%;
+  max-height: 351px;
+  height: 100%;
+}
+
+footer {
+  font-family: "Inria Sans", sans-serif;
+  background-color: rgb(20, 21, 23);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 30px;
+  height: 60px;
+}
+@media screen and (min-width: 1440px) {
+  footer {
+    height: 170px;
+  }
+}
+footer h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+footer h1 span {
+  color: rgb(204, 0, 0);
+}
+@media screen and (min-width: 1440px) {
+  footer h1 {
+    font-size: 36px;
+  }
+}
+footer .menu {
+  display: flex;
+  gap: 10px;
+}
+@media screen and (min-width: 1440px) {
+  footer .menu {
+    gap: 29px;
+  }
+}
+footer .menu li a {
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+}
+footer .menu li a:hover {
+  color: red;
+}
+@media screen and (min-width: 1440px) {
+  footer .menu li a {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+footer p {
+  color: rgb(184, 184, 184);
+  font-size: 9px;
+}
+@media screen and (min-width: 1440px) {
+  footer p {
+    font-size: 14px;
+  }
+}
+
+.container-popup-login {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .container-popup-login {
+    background-color: rgba(0, 0, 0, 0.518);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.popup-login {
+  display: flex;
+  background-color: black;
+  max-width: 100vw;
+  width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  top: 0;
+  z-index: 5;
+  font-family: "Inter", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .popup-login {
+    max-width: 480px;
+    max-height: 80vh;
+    left: 20vw;
+    top: 10vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popup-login {
+    left: 30vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .popup-login {
+    left: 35vw;
+  }
+}
+.popup-login span {
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px 7px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  cursor: pointer;
+}
+.popup-login .btn-register {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 54px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Inria Sans", sans-serif;
+}
+.popup-login .btn-register p {
+  border: 1px solid white;
+  padding: 11px 35px 14px 35px;
+}
+.popup-login .btn-register .signup {
+  border-radius: 8px 0px 0px 8px;
+  border-right: none;
+}
+.popup-login .btn-register .login {
+  border-radius: 0px 8px 8px 0px;
+  background-color: rgb(204, 0, 0);
+  border-color: rgb(204, 0, 0);
+}
+.popup-login .forgot-password {
+  color: rgb(204, 0, 0);
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 19px;
+  font-weight: 300;
+}
+.popup-login .forgot-password:hover {
+  color: white;
+}
+.popup-login .text {
+  font-weight: 300;
+}
+.popup-login .text .link-sign-up {
+  color: rgb(204, 0, 0);
+}
+.popup-login .text .link-sign-up:hover {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+}
+form .inputlogin {
+  border-radius: 8px;
+  width: 288px;
+  font-size: 16px;
+  padding: 14px 20px 11px 20px;
+  border: none;
+}
+form #password {
+  margin-bottom: 30px;
+}
+form .inputlogin::-moz-placeholder {
+  color: black;
+}
+form .inputlogin::placeholder {
+  color: black;
+}
+form .btn-login {
+  margin-top: 36px;
+  width: 288px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Inria Sans", sans-serif;
+  padding: 12px 115px;
+  background-color: rgb(204, 0, 0);
+  border: none;
+}
+
+.checkbox-remember {
+  position: absolute;
+  left: 0px;
+  top: 140px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.checkbox-remember #remember {
+  width: inherit;
+  border-radius: 4px;
+  margin-right: 5px;
+  border: none;
+}
+
+.container-popup-register {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .container-popup-register {
+    background-color: rgba(0, 0, 0, 0.518);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.popup-register {
+  display: flex;
+  background-color: black;
+  max-width: 100vw;
+  width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  top: 0;
+  z-index: 5;
+  font-family: "Inter", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .popup-register {
+    max-width: 480px;
+    max-height: 80vh;
+    left: 20vw;
+    top: 10vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popup-register {
+    left: 30vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .popup-register {
+    left: 35vw;
+  }
+}
+.popup-register span {
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px 7px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  cursor: pointer;
+}
+.popup-register .btns-register {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 54px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Inria Sans", sans-serif;
+}
+.popup-register .btns-register p {
+  border: 1px solid white;
+  padding: 11px 35px 14px 35px;
+}
+.popup-register .btns-register .signup {
+  border-radius: 8px 0px 0px 8px;
+  background-color: rgb(204, 0, 0);
+  border-color: rgb(204, 0, 0);
+}
+.popup-register .btns-register .login {
+  border-radius: 0px 8px 8px 0px;
+  border-left: none;
+}
+.popup-register .text {
+  font-weight: 300;
+  line-height: 28px;
+}
+.popup-register .text .link-register {
+  color: rgb(204, 0, 0);
+}
+.popup-register .text .link-register:hover {
+  color: white;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+}
+.form-register .inputregister {
+  border-radius: 8px;
+  width: 288px;
+  font-size: 16px;
+  padding: 14px 20px 11px 20px;
+  border: none;
+}
+.form-register #password2 {
+  margin-bottom: 30px;
+}
+.form-register .inputregister::-moz-placeholder {
+  color: black;
+}
+.form-register .inputregister::placeholder {
+  color: black;
+}
+.form-register .btn-register {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  width: 288px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Inria Sans", sans-serif;
+  padding: 12px 115px;
+  background-color: rgb(204, 0, 0);
+  border: none;
+}
+
+.checkbox-remember {
+  position: absolute;
+  left: 0px;
+  top: 200px;
+  font-weight: 300;
+  font-size: 16px;
+}
+.checkbox-remember #remember {
+  width: inherit;
+  border-radius: 4px;
+  margin-right: 5px;
+  border: none;
+}
+
+.container-movie {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .container-movie {
+    background-color: rgba(0, 0, 0, 0.518);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.popup-movie {
+  display: flex;
+  background-color: black;
+  max-width: 100vw;
+  width: 100%;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  top: 0;
+  z-index: 5;
+  font-family: "Inria Sans", sans-serif;
+  padding: 50px 50px;
+}
+@media screen and (min-width: 768px) {
+  .popup-movie {
+    max-width: 480px;
+    max-height: 80vh;
+    left: 20vw;
+    top: 10vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popup-movie {
+    left: 30vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .popup-movie {
+    left: 35vw;
+  }
+}
+.popup-movie .close-popup-movie {
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px 7px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  cursor: pointer;
+}
+.popup-movie .image-movie {
+  max-width: 234px;
+  width: 100%;
+  max-height: 351px;
+  height: 100%;
+  border: 1px solid white;
+}
+
+.detail-movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.detail-movie .name-movie {
+  font-size: 20px;
+  color: rgb(204, 0, 0);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.detail-movie .date-movie {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+.detail-movie .note {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+.detail-movie .note .note-movie {
+  color: rgb(204, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
+}
+.detail-movie .genre-movie {
+  margin-top: 17px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.detail-movie .resume-movie {
+  margin-top: 13px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.detail-movie .acteur {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 26px;
+}/*# sourceMappingURL=style.css.map */

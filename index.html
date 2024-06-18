@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeMovies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+        <span class="close-menu">X</span>
+        <h1 class="logo"><span>Be</span>movies</h1>
+        <ul class="menu">
+            <li><a href="">Search</a></li>
+            <li><a href="">Latest</a></li>
+            <li><a href="">Genres</a></li>
+            <li><a href="" class="open-register">Register</a></li>
+            <li><a href="" class="open-login">Signin</a></li>
+        </ul>
+        <img src="burger-menu-svgrepo-com.svg" alt="Menu-burger" class="open-menu" width="32px">
+    </header>
+    
+    <div class="container">
+
+        <!--SEARCH-->
+        <form action="" class="form-search">
+            <input type="text" id="recherche" name="recherche" class="search">
+            <button type="submit" class="btn-search"><img src="fleche.svg" alt="Flèche"></button>
+        </form>
+
+        <!--RESULTATS FOR ""-->
+        <div class="resultat">
+            <p>Results for "<span class="recherche-film"></span>"</p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 3</div>  -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!--LATEST RELEASES-->
+        <div class="latest">
+            <p>Latest Releases</p>
+            <div class="swiper1 mySwiper1">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 3</div>  -->
+                </div>
+                <div class="swiper-button-next1"></div>
+                <div class="swiper-button-prev1"></div>
+            </div>
+        </div>
+
+        <!--MOVIES BY GENRE-->
+        <div class="by-genre">
+            <p>Movies by genre</p>
+            <ul class="list-genre">
+                <li><a href="">Comedy</a></li>
+                <li><a href="">Drama</a></li>
+                <li><a href="">Action</a></li>
+                <li><a href="">Romance</a></li>
+                <li><a href="">Fantasy</a></li>
+                <li><a href="">Animation</a></li>
+            </ul>
+            <p class="genre-name"></p>
+            <div class="swiper2 mySwiper2">
+                <!-- <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div> 
+                    <div class="swiper-slide">Slide 3</div> 
+                </div> -->
+                <div class="swiper-button-next2"></div>
+                <div class="swiper-button-prev2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--POPUP LOGIN-->
+    <div class="container-popup-login">
+        <div class="popup-login">
+            <span>X</span>
+            <div class="btn-register">
+                <p class="signup">Signup</p>
+                <p class="login">Login</p>
+            </div>
+            <form action="">
+                <input type="text" id="userName" name="userName" placeholder="Username" class="inputlogin">
+                <input type="password" name="password" id="password" placeholder="Password" class="inputlogin">
+                <div class="checkbox-remember">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember" class="remember">Remember me</label>
+                </div>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+            <a href="" class="forgot-password">I forget my password</a>
+            <p class="text">Not a member yet ? <a href="" class="link-sign-up">Sign up</a></p>
+        </div>
+    </div>
+
+    <!--POPUP REGISTER-->
+    <div class="container-popup-register">
+        <div class="popup-register">
+            <span>X</span>
+            <div class="btns-register">
+                <p class="signup">Signup</p>
+                <p class="login">Login</p>
+            </div>
+            <form action="" class="form-register">
+                <input type="text" id="userName" name="userName" placeholder="Username" class="inputregister">
+                <input type="password" name="password1" id="password1" placeholder="Password" class="inputregister">
+                <input type="password" name="password2" id="password2" placeholder="Same password" class="inputregister">
+                <div class="checkbox-remember">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember" class="remember">Remember me</label>
+                </div>
+                <button type="submit" class="btn-register">Register</button>
+            </form>
+            <p class="text">Do you already have an account? <a href="" class="link-register">Register now</a></p>
+        </div>
+    </div>
+
+    <!--POPUP MOVIE-->
+    <div class="container-movie">
+        <div class="popup-movie">
+            <span class="close-popup-movie">X</span>
+            <img src="" alt="" class="image-movie">
+            <div class="detail-movie">
+                <h2 class="name-movie"></h2>
+                <p class="date-movie"></p>
+                <div class="note">
+                    <img src="Vectoretoile.svg" alt="Etoile">
+                    <p class="note-movie"></p>
+                </div>
+                <p class="genre-movie"></p>
+                <p class="resume-movie"></p>
+                <p class="acteur">CAST : <span class="acteur-movie"></span></p>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer>
+        <h1 class="logo"><span>Be</span>movies</h1>
+        <ul class="menu">
+            <li><a href="">Search</a></li>
+            <li><a href="">Latest</a></li>
+            <li><a href="">Genres</a></li>
+            <li><a href="" class="open-register">Register</a></li>
+            <li><a href="" class="open-login">Signin</a></li>
+        </ul>
+        <p>@2023 - All rights reserved</p>
+    </footer>
+</body>
+</html>
