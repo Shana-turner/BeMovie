@@ -222,6 +222,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     const registerPopupContainer = document.querySelector('.container-popup-register');
     const closeLoginPopup = loginPopupContainer.querySelector('span');
     const closeRegisterPopup = registerPopupContainer.querySelector('span');
+    const registerBtn = document.querySelector('.btn-register[type="submit"]');
     // Movie details popup.
     const moviePopupContainer = document.querySelector('.container-movie');
     const closeMoviePopup = moviePopupContainer.querySelector('.close-popup-movie');
@@ -253,6 +254,40 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             }
         });
     })
+
+    // Form validation when clicking on the register button.
+    registerBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        // Remove previous message.
+        const previousMessage = document.querySelector(".form-validation");
+        if (previousMessage) {
+            previousMessage.remove();
+        }
+
+        // Check passwords.
+        const passwordInput = document.querySelector(".container-popup-register input#password1");
+        const confirmPasswordInput = document.querySelector(".container-popup-register input#password2");
+        const password = passwordInput.value.trim();
+        const confirmPassword = confirmPasswordInput.value.trim();
+        let validation = ""
+        if (password === "") {
+            validation = "Missing password !";
+        } else if (password.length < 10) {
+            validation = "Your password must be at least 10 characters long !";
+        } else if (password !== confirmPassword) {
+            validation = "Both passwords must match !";
+        }
+
+        // Create new message.
+        if (validation) {
+            let message = document.createElement("p");
+            message.classList.add("form-validation");
+            message.style.color = "red";
+            message.style.width = "288px";
+            message.innerText = validation;
+            registerBtn.insertAdjacentElement("beforebegin", message);
+        }
+    });
   
     // ------------
     // LATEST RESULTS
