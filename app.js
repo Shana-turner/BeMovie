@@ -87,6 +87,7 @@ function createMovieSlide(movie, moviePopupContainer) {
     const posterUrl = movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : "placeholder.jpg";
     slide.style.backgroundImage = `url("${posterUrl}")`;
     slide.style.backgroundSize = "100%";
+    slide.style.backgroundRepeat = "no-repeat";
 
     const movieDetails = document.createElement("div");
     movieDetails.classList.add("movie");
@@ -134,11 +135,20 @@ function updateSwiperWrapper(swipperSectionSelector, movies, moviePopupContainer
 
     // Initialize Swiper
     const swiper = new Swiper(`${swipperSectionSelector} .mySwiper`, {
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
             nextEl: `${swipperSectionSelector} .swiper-button-next`,
             prevEl: `${swipperSectionSelector} .swiper-button-prev`,
+        },
+        breakpoints: {
+            // when window width is >= 450px, display 2 slides.
+            450: {
+                slidesPerView: 2,
+            },
+            800: {
+              slidesPerView: 4,
+            },
         },
     }); // TODO chercher pagination/starting slide
 }
@@ -185,6 +195,17 @@ function getGenreNames(genreIds) {
 document.addEventListener('DOMContentLoaded', async (event) => {
     // Fetch the genres and store them once.
     fetchedGenres =  await fetchGenres();
+
+    // Open hamburger menu on click.
+    const hamburgerBtn = document.querySelector(".open-menu");
+    const menu = document.querySelector("ul.menu");
+    hamburgerBtn.addEventListener("click", () => {
+        if (window.getComputedStyle(menu).display === "none") {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "";
+        }
+    });
 
     // Hide the search result container.
     const searchResultsContainer = document.querySelector(".resultat");
